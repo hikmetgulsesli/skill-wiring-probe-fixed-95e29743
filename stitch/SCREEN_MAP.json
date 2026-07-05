@@ -1,0 +1,29 @@
+[
+  {
+    "screenId": "da2bb666e5b04e16a4d861e33b1e5d46",
+    "name": "Insights - Skill Wiring Probe Fixed",
+    "type": "app-screen",
+    "description": "Insights - Skill Wiring Probe Fixed screen",
+    "surfaceIds": [
+      "SURF_INSIGHTS"
+    ]
+  },
+  {
+    "screenId": "3f8af98080a24001b8991d265d314569",
+    "name": "Record Editor - Skill Wiring Probe Fixed",
+    "type": "form",
+    "description": "Record Editor - Skill Wiring Probe Fixed screen",
+    "surfaceIds": [
+      "SURF_RECORD_EDITOR"
+    ]
+  },
+  {
+    "screenId": "23d37e15a8a741eab34dbcdb2492b91c",
+    "name": "Record Operations - Skill Wiring Probe Fixed",
+    "type": "app-screen",
+    "description": "Record Operations - Skill Wiring Probe Fixed screen",
+    "surfaceIds": [
+      "SURF_RECORD_OPERATIONS"
+    ]
+  }
+]

@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Record Editor - Skill Wiring Probe Fixed</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=JetBrains+Mono:wght@400&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "tertiary-container": "#6c748b",
+                        "surface-container-high": "#dbe9ff",
+                        "inverse-on-surface": "#e9f1ff",
+                        "on-primary-fixed-variant": "#004e61",
+                        "on-surface": "#0d1c2d",
+                        "surface-dim": "#ccdbf2",
+                        "secondary-fixed": "#d5e3fc",
+                        "on-error-container": "#93000a",
+                        "on-primary": "#ffffff",
+                        "on-surface-variant": "#3e484d",
+                        "on-error": "#ffffff",
+                        "on-secondary": "#ffffff",
+                        "background": "#f8f9ff",
+                        "secondary-fixed-dim": "#b9c7df",
+                        "surface-container-lowest": "#ffffff",
+                        "on-secondary-fixed": "#0d1c2e",
+                        "outline": "#6e797e",
+                        "surface-tint": "#006780",
+                        "primary-fixed": "#b7eaff",
+                        "surface-container-highest": "#d4e4fa",
+                        "error-container": "#ffdad6",
+                        "primary": "#00647c",
+                        "on-secondary-container": "#57657a",
+                        "on-primary-container": "#fafdff",
+                        "inverse-surface": "#233143",
+                        "outline-variant": "#bdc8ce",
+                        "surface": "#f8f9ff",
+                        "primary-fixed-dim": "#6cd3f7",
+                        "secondary-container": "#d5e3fc",
+                        "surface-container": "#e5efff",
+                        "on-tertiary": "#ffffff",
+                        "surface-container-low": "#eef4ff",
+                        "tertiary-fixed-dim": "#bec6e0",
+                        "tertiary": "#545c72",
+                        "error": "#ba1a1a",
+                        "primary-container": "#007f9d",
+                        "surface-variant": "#d4e4fa",
+                        "surface-bright": "#f8f9ff",
+                        "secondary": "#515f74",
+                        "on-tertiary-fixed": "#131b2e",
+                        "on-secondary-fixed-variant": "#3a485b",
+                        "on-background": "#0d1c2d",
+                        "inverse-primary": "#6cd3f7",
+                        "on-tertiary-fixed-variant": "#3f465c",
+                        "on-primary-fixed": "#001f28",
+                        "tertiary-fixed": "#dae2fd",
+                        "on-tertiary-container": "#fefcff"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "spacing": {
+                        "base": "4px",
+                        "lg": "16px",
+                        "sidebar_width": "240px",
+                        "sm": "8px",
+                        "topbar_height": "48px",
+                        "2xl": "32px",
+                        "xl": "24px",
+                        "md": "12px",
+                        "xs": "4px"
+                    },
+                    "fontFamily": {
+                        "display-lg": ["Inter"],
+                        "mono-data": ["JetBrains Mono"],
+                        "body-md": ["Inter"],
+                        "body-sm": ["Inter"],
+                        "headline-md": ["Inter"],
+                        "headline-sm": ["Inter"],
+                        "label-sm": ["Inter"],
+                        "label-md": ["Inter"]
+                    },
+                    "fontSize": {
+                        "display-lg": ["30px", { "lineHeight": "38px", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+                        "mono-data": ["13px", { "lineHeight": "18px", "fontWeight": "400" }],
+                        "body-md": ["14px", { "lineHeight": "20px", "fontWeight": "400" }],
+                        "body-sm": ["13px", { "lineHeight": "18px", "fontWeight": "400" }],
+                        "headline-md": ["20px", { "lineHeight": "28px", "letterSpacing": "-0.01em", "fontWeight": "600" }],
+                        "headline-sm": ["16px", { "lineHeight": "24px", "fontWeight": "600" }],
+                        "label-sm": ["11px", { "lineHeight": "14px", "fontWeight": "500" }],
+                        "label-md": ["12px", { "lineHeight": "16px", "letterSpacing": "0.02em", "fontWeight": "600" }]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .icon-fill {
+            font-variation-settings: 'FILL' 1, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+    </style>
+</head>
+<body class="bg-background text-on-background font-body-md min-h-screen flex flex-col m-0 p-0 overflow-hidden">
+<!-- TopNavBar -->
+<nav class="fixed top-0 w-full h-[48px] flex justify-between items-center px-lg z-50 bg-surface dark:bg-inverse-surface border-b border-outline-variant dark:border-outline">
+<div class="flex items-center gap-md">
+<span class="font-headline-md text-headline-md font-bold text-primary dark:text-primary-fixed-dim">Skill Wiring Probe Fixed</span>
+</div>
+<div class="flex items-center gap-sm">
+<div class="relative hidden md:flex items-center mr-md">
+<span class="material-symbols-outlined absolute left-2 text-on-surface-variant text-[18px]">search</span>
+<input class="pl-[28px] pr-sm h-[32px] w-[200px] bg-surface border border-outline-variant rounded-DEFAULT font-body-sm text-body-sm text-on-surface focus:border-primary focus:ring-1 focus:ring-primary outline-none transition-colors" placeholder="Search..." type="text"/>
+</div>
+<button class="p-xs text-on-surface-variant dark:text-surface-variant hover:bg-surface-container-low dark:hover:bg-tertiary-container transition-colors rounded-full cursor-pointer active:opacity-80">
+<span class="material-symbols-outlined text-[20px]">toggle_on</span>
+</button>
+<button class="p-xs text-on-surface-variant dark:text-surface-variant hover:bg-surface-container-low dark:hover:bg-tertiary-container transition-colors rounded-full cursor-pointer active:opacity-80">
+<span class="material-symbols-outlined text-[20px]">notifications</span>
+</button>
+<button class="p-xs text-on-surface-variant dark:text-surface-variant hover:bg-surface-container-low dark:hover:bg-tertiary-container transition-colors rounded-full cursor-pointer active:opacity-80">
+<span class="material-symbols-outlined text-[20px]">settings</span>
+</button>
+<div class="ml-sm w-[32px] h-[32px] rounded-full overflow-hidden border border-outline-variant ml-xs">
+<img alt="User Avatar" class="w-full h-full object-cover" data-alt="A professional headshot of a user avatar for a high-tech application. The lighting is clean and modern, set against a neutral gray background. The subject wears dark, tailored clothing fitting a modern corporate environment. The image is crisp, high-resolution, and perfectly centered." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAtqrAr4k8WT8UbgPG3TYGPro4fZGDlkbI6pKDz4_AbHn01PR0lsTAkgBM856Ah0m5nlCJTSYNKy2yK4BeMpAFT84a0ekhe6peU7y7tqr1iZAvRpPRm6R_gZLEd0IXjfcj4pO3uR42_IOC5SQ72T0mgJbw_pFYyuxBqJCLjkRwmPDvp-xQn1uMdpP8pIF-tnZ-Pz3gJ1nu_Rl-SzMdtlJioDTUEOxdW36kunIUVQzMnz33yzDmPfQwumbNgl-PR1VTpinsMjPx3K6v2"/>
+</div>
+</div>
+</nav>
+<div class="flex flex-1 pt-[48px] h-screen w-full">
+<!-- SideNavBar -->
+<aside class="hidden md:flex fixed left-0 top-[48px] h-[calc(100vh-48px)] w-[240px] flex-col py-xl bg-inverse-surface dark:bg-on-surface border-r border-outline-variant/20 z-40">
+<div class="px-lg mb-xl flex items-center gap-md">
+<div class="w-[40px] h-[40px] bg-primary/20 rounded-lg flex items-center justify-center border border-primary/30">
+<span class="material-symbols-outlined text-primary-fixed-dim icon-fill">memory</span>
+</div>
+<div>
+<h2 class="font-headline-sm text-headline-sm text-primary-fixed-dim">Wiring Probe</h2>
+<p class="font-label-sm text-label-sm text-surface-variant/70">Fixed Node v4.2</p>
+</div>
+</div>
+<div class="px-md mb-lg">
+<button class="w-full flex items-center justify-center gap-sm bg-primary hover:bg-primary/90 text-on-primary font-label-md text-label-md py-sm rounded-DEFAULT transition-colors">
+<span class="material-symbols-outlined text-[18px]">add</span>
+                    New Probe
+                </button>
+</div>
+<nav class="flex-1 flex flex-col gap-xs px-sm overflow-y-auto">
+<a class="flex items-center gap-md px-md py-sm rounded-DEFAULT text-surface-variant/70 hover:text-surface-variant hover:bg-surface-variant/10 transition-all duration-200 ease-in-out" href="#">
+<span class="material-symbols-outlined text-[18px]">precision_manufacturing</span>
+<span class="font-label-md text-label-md">Operations</span>
+</a>
+<a class="flex items-center gap-md px-md py-sm rounded-DEFAULT bg-primary/10 text-primary-fixed-dim border-l-[3px] border-primary-fixed-dim transition-all duration-200 ease-in-out" href="#">
+<span class="material-symbols-outlined text-[18px] icon-fill">edit_note</span>
+<span class="font-label-md text-label-md">Editor</span>
+</a>
+<a class="flex items-center gap-md px-md py-sm rounded-DEFAULT text-surface-variant/70 hover:text-surface-variant hover:bg-surface-variant/10 transition-all duration-200 ease-in-out" href="#">
+<span class="material-symbols-outlined text-[18px]">analytics</span>
+<span class="font-label-md text-label-md">Insights</span>
+</a>
+</nav>
+<div class="mt-auto px-sm flex flex-col gap-xs border-t border-outline-variant/10 pt-md">
+<a class="flex items-center gap-md px-md py-sm rounded-DEFAULT text-surface-variant/70 hover:text-surface-variant hover:bg-surface-variant/10 transition-all duration-200 ease-in-out" href="#">
+<span class="material-symbols-outlined text-[18px]">settings</span>
+<span class="font-label-md text-label-md">Settings</span>
+</a>
+<a class="flex items-center gap-md px-md py-sm rounded-DEFAULT text-surface-variant/70 hover:text-surface-variant hover:bg-surface-variant/10 transition-all duration-200 ease-in-out" href="#">
+<span class="material-symbols-outlined text-[18px]">help</span>
+<span class="font-label-md text-label-md">Support</span>
+</a>
+</div>
+</aside>
+<!-- Main Canvas -->
+<main class="flex-1 md:ml-[240px] p-lg md:p-xl overflow-y-auto bg-background flex flex-col gap-lg">
+<!-- Unsaved Changes Banner -->
+<div class="bg-error-container/20 border border-error/20 rounded-DEFAULT p-md flex items-center justify-between shadow-sm">
+<div class="flex items-center gap-sm text-error">
+<span class="material-symbols-outlined text-[18px]">warning</span>
+<span class="font-label-md text-label-md">You have unsaved changes.</span>
+</div>
+<div class="flex gap-sm">
+<button class="font-label-md text-label-md text-secondary hover:text-on-surface transition-colors">Discard</button>
+<button class="font-label-md text-label-md text-primary hover:text-primary/80 transition-colors">Save Now</button>
+</div>
+</div>
+<!-- Editor Header -->
+<div class="flex items-center justify-between border-b border-outline-variant pb-md">
+<div>
+<h1 class="font-headline-md text-headline-md text-on-surface">Record Editor</h1>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-xs">Configure routing rules and execution parameters.</p>
+</div>
+</div>
+<!-- Form Container -->
+<div class="bg-surface border border-outline-variant rounded-lg p-xl shadow-sm flex flex-col gap-xl w-full max-w-4xl mx-auto">
+<form class="flex flex-col gap-xl">
+<!-- General Information Section -->
+<div class="flex flex-col gap-md">
+<h3 class="font-label-sm text-label-sm uppercase text-on-surface-variant tracking-wider border-b border-outline-variant/50 pb-xs">General Information</h3>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-lg">
+<div class="flex flex-col gap-xs">
+<label class="font-label-md text-label-md text-on-surface flex items-center gap-xs">
+                                    Record Name <span class="text-error">*</span>
+</label>
+<input class="h-[32px] px-sm border border-error bg-error-container/10 rounded-DEFAULT font-body-sm text-body-sm text-on-surface focus:outline-none focus:ring-1 focus:ring-error transition-colors" type="text" value="RoutingNode_Alpha"/>
+<span class="font-label-sm text-label-sm text-error mt-xs">Name must contain only alphanumeric characters and underscores.</span>
+</div>
+<div class="flex flex-col gap-xs">
+<label class="font-label-md text-label-md text-on-surface">
+                                    Status
+                                </label>
+<div class="relative h-[32px]">
+<select class="w-full h-full pl-sm pr-lg border border-outline-variant bg-surface rounded-DEFAULT font-body-sm text-body-sm text-on-surface appearance-none focus:border-primary focus:ring-1 focus:ring-primary outline-none cursor-pointer">
+<option value="active">Active</option>
+<option value="inactive">Inactive</option>
+<option value="maintenance">Maintenance</option>
+</select>
+<span class="material-symbols-outlined absolute right-2 top-1/2 -translate-y-1/2 text-on-surface-variant pointer-events-none text-[18px]">expand_more</span>
+</div>
+</div>
+</div>
+<div class="flex flex-col gap-xs">
+<label class="font-label-md text-label-md text-on-surface">
+                                Description <span class="text-on-surface-variant font-normal">(Optional)</span>
+</label>
+<textarea class="p-sm border border-outline-variant bg-surface rounded-DEFAULT font-body-sm text-body-sm text-on-surface focus:border-primary focus:ring-1 focus:ring-primary outline-none resize-none transition-colors" rows="2">Handles primary routing for incoming telemetry data streams.</textarea>
+</div>
+</div>
+<!-- Configuration Section -->
+<div class="flex flex-col gap-md">
+<h3 class="font-label-sm text-label-sm uppercase text-on-surface-variant tracking-wider border-b border-outline-variant/50 pb-xs">Execution Parameters</h3>
+<div class="flex flex-col gap-xs mb-md">
+<label class="font-label-md text-label-md text-on-surface mb-xs">Priority Level</label>
+<div class="flex items-center gap-xl">
+<label class="flex items-center gap-sm cursor-pointer group">
+<input class="w-4 h-4 text-primary bg-surface border-outline-variant focus:ring-primary focus:ring-offset-surface" name="priority" type="radio"/>
+<span class="font-body-sm text-body-sm text-on-surface group-hover:text-primary transition-colors">Low</span>
+</label>
+<label class="flex items-center gap-sm cursor-pointer group">
+<input checked="" class="w-4 h-4 text-primary bg-surface border-outline-variant focus:ring-primary focus:ring-offset-surface" name="priority" type="radio"/>
+<span class="font-body-sm text-body-sm text-on-surface group-hover:text-primary transition-colors">Standard</span>
+</label>
+<label class="flex items-center gap-sm cursor-pointer group">
+<input class="w-4 h-4 text-primary bg-surface border-outline-variant focus:ring-primary focus:ring-offset-surface" name="priority" type="radio"/>
+<span class="font-body-sm text-body-sm text-on-surface group-hover:text-primary transition-colors text-error">Critical</span>
+</label>
+</div>
+</div>
+<div class="flex flex-col gap-xs">
+<div class="flex justify-between items-center">
+<label class="font-label-md text-label-md text-on-surface flex items-center gap-xs">
+                                    JSON Payload <span class="material-symbols-outlined text-[14px] text-on-surface-variant" title="Valid JSON required">info</span>
+</label>
+<button class="font-label-sm text-label-sm text-primary hover:underline flex items-center gap-xs" type="button">
+<span class="material-symbols-outlined text-[14px]">code_blocks</span> Format JSON
+                                </button>
+</div>
+<div class="relative rounded-DEFAULT border border-outline-variant overflow-hidden bg-[#1e1e1e]">
+<!-- Line numbers simulation -->
+<div class="absolute left-0 top-0 bottom-0 w-[40px] bg-[#2d2d2d] border-r border-[#404040] py-sm flex flex-col items-end pr-sm text-[#858585] font-mono-data text-mono-data select-none">
+<span>1</span><span>2</span><span>3</span><span>4</span><span>5</span><span>6</span>
+</div>
+<textarea class="w-full pl-[48px] pr-sm py-sm bg-transparent text-[#d4d4d4] font-mono-data text-mono-data border-none focus:ring-0 resize-y min-h-[120px] focus:outline-none" rows="6">{
+  "retry_count": 3,
+  "timeout_ms": 5000,
+  "endpoint": "/api/v1/telemetry",
+  "log_level": "verbose"
+}</textarea>
+</div>
+</div>
+</div>
+</form>
+<!-- Action Footer -->
+<div class="flex items-center justify-end gap-md pt-lg border-t border-outline-variant mt-auto">
+<button class="px-lg h-[32px] bg-surface border border-outline-variant text-on-surface font-label-md text-label-md rounded-DEFAULT hover:bg-surface-container-low transition-colors">
+                        Cancel
+                    </button>
+<button class="px-lg h-[32px] bg-primary text-on-primary font-label-md text-label-md rounded-DEFAULT hover:bg-primary/90 transition-colors flex items-center gap-sm shadow-sm">
+<span class="material-symbols-outlined text-[16px]">save</span>
+                        Save Record
+                    </button>
+</div>
+</div>
+</main>
+</div>
+</body></html>
