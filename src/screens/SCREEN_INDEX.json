@@ -1,0 +1,303 @@
+[
+  {
+    "screenId": "da2bb666e5b04e16a4d861e33b1e5d46",
+    "title": "Insights - Skill Wiring Probe Fixed",
+    "componentName": "InsightsSkillWiringProbeFixed",
+    "file": "src/screens/InsightsSkillWiringProbeFixed.tsx",
+    "buttons": 8,
+    "inputs": 1,
+    "links": 6,
+    "actions": [
+      {
+        "id": "toggle-on-1",
+        "kind": "button",
+        "label": "Toggle On",
+        "index": 0
+      },
+      {
+        "id": "notifications-2",
+        "kind": "button",
+        "label": "Notifications",
+        "index": 1
+      },
+      {
+        "id": "settings-3",
+        "kind": "button",
+        "label": "Settings",
+        "index": 2
+      },
+      {
+        "id": "new-probe-4",
+        "kind": "button",
+        "label": "New Probe",
+        "index": 3
+      },
+      {
+        "id": "filter-insights-5",
+        "kind": "button",
+        "label": "Filter Insights",
+        "index": 4
+      },
+      {
+        "id": "export-summary-6",
+        "kind": "button",
+        "label": "Export Summary",
+        "index": 5
+      },
+      {
+        "id": "more-vert-7",
+        "kind": "button",
+        "label": "More Vert",
+        "index": 6
+      },
+      {
+        "id": "enable-trace-logic-8",
+        "kind": "button",
+        "label": "Enable Trace Logic",
+        "index": 7
+      },
+      {
+        "id": "operations-1",
+        "kind": "link",
+        "label": "Operations",
+        "href": "#",
+        "index": 0
+      },
+      {
+        "id": "editor-2",
+        "kind": "link",
+        "label": "Editor",
+        "href": "#",
+        "index": 1
+      },
+      {
+        "id": "insights-3",
+        "kind": "link",
+        "label": "Insights",
+        "href": "#",
+        "index": 2
+      },
+      {
+        "id": "settings-4",
+        "kind": "link",
+        "label": "Settings",
+        "href": "#",
+        "index": 3
+      },
+      {
+        "id": "support-5",
+        "kind": "link",
+        "label": "Support",
+        "href": "#",
+        "index": 4
+      },
+      {
+        "id": "view-in-operations-6",
+        "kind": "link",
+        "label": "View in Operations",
+        "href": "#",
+        "index": 5
+      }
+    ]
+  },
+  {
+    "screenId": "3f8af98080a24001b8991d265d314569",
+    "title": "Record Editor - Skill Wiring Probe Fixed",
+    "componentName": "RecordEditorSkillWiringProbeFixed",
+    "file": "src/screens/RecordEditorSkillWiringProbeFixed.tsx",
+    "buttons": 9,
+    "inputs": 5,
+    "links": 5,
+    "actions": [
+      {
+        "id": "toggle-on-1",
+        "kind": "button",
+        "label": "Toggle On",
+        "index": 0
+      },
+      {
+        "id": "notifications-2",
+        "kind": "button",
+        "label": "Notifications",
+        "index": 1
+      },
+      {
+        "id": "settings-3",
+        "kind": "button",
+        "label": "Settings",
+        "index": 2
+      },
+      {
+        "id": "new-probe-4",
+        "kind": "button",
+        "label": "New Probe",
+        "index": 3
+      },
+      {
+        "id": "discard-5",
+        "kind": "button",
+        "label": "Discard",
+        "index": 4
+      },
+      {
+        "id": "save-now-6",
+        "kind": "button",
+        "label": "Save Now",
+        "index": 5
+      },
+      {
+        "id": "format-json-7",
+        "kind": "button",
+        "label": "Format JSON",
+        "index": 6
+      },
+      {
+        "id": "cancel-8",
+        "kind": "button",
+        "label": "Cancel",
+        "index": 7
+      },
+      {
+        "id": "save-record-9",
+        "kind": "button",
+        "label": "Save Record",
+        "index": 8
+      },
+      {
+        "id": "operations-1",
+        "kind": "link",
+        "label": "Operations",
+        "href": "#",
+        "index": 0
+      },
+      {
+        "id": "editor-2",
+        "kind": "link",
+        "label": "Editor",
+        "href": "#",
+        "index": 1
+      },
+      {
+        "id": "insights-3",
+        "kind": "link",
+        "label": "Insights",
+        "href": "#",
+        "index": 2
+      },
+      {
+        "id": "settings-4",
+        "kind": "link",
+        "label": "Settings",
+        "href": "#",
+        "index": 3
+      },
+      {
+        "id": "support-5",
+        "kind": "link",
+        "label": "Support",
+        "href": "#",
+        "index": 4
+      }
+    ]
+  },
+  {
+    "screenId": "23d37e15a8a741eab34dbcdb2492b91c",
+    "title": "Record Operations - Skill Wiring Probe Fixed",
+    "componentName": "RecordOperationsSkillWiringProbeFixed",
+    "file": "src/screens/RecordOperationsSkillWiringProbeFixed.tsx",
+    "buttons": 9,
+    "inputs": 3,
+    "links": 5,
+    "actions": [
+      {
+        "id": "new-probe-1",
+        "kind": "button",
+        "label": "New Probe",
+        "index": 0
+      },
+      {
+        "id": "toggle-on-off-2",
+        "kind": "button",
+        "label": "Toggle On/Off",
+        "index": 1
+      },
+      {
+        "id": "notifications-3",
+        "kind": "button",
+        "label": "Notifications",
+        "index": 2
+      },
+      {
+        "id": "settings-4",
+        "kind": "button",
+        "label": "Settings",
+        "index": 3
+      },
+      {
+        "id": "refresh-5",
+        "kind": "button",
+        "label": "Refresh",
+        "index": 4
+      },
+      {
+        "id": "close-preview-6",
+        "kind": "button",
+        "label": "Close Preview",
+        "index": 5
+      },
+      {
+        "id": "edit-7",
+        "kind": "button",
+        "label": "Edit",
+        "index": 6
+      },
+      {
+        "id": "suspend-8",
+        "kind": "button",
+        "label": "Suspend",
+        "index": 7
+      },
+      {
+        "id": "force-sync-9",
+        "kind": "button",
+        "label": "Force Sync",
+        "index": 8
+      },
+      {
+        "id": "operations-1",
+        "kind": "link",
+        "label": "Operations",
+        "href": "#",
+        "index": 0
+      },
+      {
+        "id": "editor-2",
+        "kind": "link",
+        "label": "Editor",
+        "href": "#",
+        "index": 1
+      },
+      {
+        "id": "insights-3",
+        "kind": "link",
+        "label": "Insights",
+        "href": "#",
+        "index": 2
+      },
+      {
+        "id": "settings-4-2",
+        "kind": "link",
+        "label": "Settings",
+        "href": "#",
+        "index": 3
+      },
+      {
+        "id": "support-5",
+        "kind": "link",
+        "label": "Support",
+        "href": "#",
+        "index": 4
+      }
+    ]
+  }
+]
