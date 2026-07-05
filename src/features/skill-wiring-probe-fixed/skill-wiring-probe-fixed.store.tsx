@@ -38,8 +38,8 @@ export function useSkillWiringProbeFixedStore(): StoreContextValue {
 }
 
 export function StoreProvider({ children }: { children: React.ReactNode }) {
-  const [activeSurface, setActiveSurfaceState] = useState<SurfaceId>(getDefaultSurface());
-  const [activePanel, setActivePanelState] = useState<PanelId>(getDefaultPanel());
+  const [activeSurface, setActiveSurfaceState] = useState<SurfaceId>(() => getDefaultSurface());
+  const [activePanel, setActivePanelState] = useState<PanelId>(() => getDefaultPanel());
   const [selectedRecordId, setSelectedRecordId] = useState<string | null>(null);
   const [selectedRecord, setSelectedRecord] = useState<SkillWiringProbeFixedRecord | null>(null);
   const [storageStatus, setStorageStatus] = useState<SkillWiringProbeFixedState['storageStatus']>('loading');
@@ -57,26 +57,38 @@ export function StoreProvider({ children }: { children: React.ReactNode }) {
     }
   }, []);
 
+  // Sync records to localStorage declaratively
+  useEffect(() => {
+    if (storageStatus === 'ready') {
+      try {
+        saveRecords(records);
+      } catch {
+        // ignore
+      }
+    }
+  }, [records, storageStatus]);
+
+  // Sync preferences to localStorage declaratively
+  useEffect(() => {
+    if (storageStatus === 'ready') {
+      try {
+        savePreferences({ activeSurface, activePanel });
+      } catch {
+        // ignore
+      }
+    }
+  }, [activeSurface, activePanel, storageStatus]);
+
   const recordCount = records.length;
   const activeCount = records.filter((r) => r.status === 'active').length;
   const suspendedCount = records.filter((r) => r.status === 'suspended').length;
 
   const setActiveSurface = useCallback((surface: SurfaceId) => {
     setActiveSurfaceState(surface);
-    try {
-      savePreferences({ activeSurface: surface, activePanel: getDefaultPanel() });
-    } catch {
-      // ignore
-    }
   }, []);
 
   const setActivePanel = useCallback((panel: PanelId) => {
     setActivePanelState(panel);
-    try {
-      savePreferences({ activeSurface: getDefaultSurface(), activePanel: panel });
-    } catch {
-      // ignore
-    }
   }, []);
 
   const selectRecord = useCallback((record: SkillWiringProbeFixedRecord | null) => {
@@ -89,34 +101,27 @@ export function StoreProvider({ children }: { children: React.ReactNode }) {
       const now = new Date().toISOString();
       const newRecord: SkillWiringProbeFixedRecord = {
         ...record,
-        id: crypto.randomUUID(),
+        id:
+          typeof crypto !== 'undefined' && crypto.randomUUID
+            ? crypto.randomUUID()
+            : Math.random().toString(36).substring(2, 15),
         createdAt: now,
         updatedAt: now,
       };
-      setRecords((prev) => {
-        const next = [...prev, newRecord];
-        saveRecords(next);
-        return next;
-      });
+      setRecords((prev) => [...prev, newRecord]);
     },
     []
   );
 
   const updateRecord = useCallback((record: SkillWiringProbeFixedRecord) => {
-    setRecords((prev) => {
-      const next = prev.map((r) => (r.id === record.id ? { ...record, updatedAt: new Date().toISOString() } : r));
-      saveRecords(next);
-      return next;
-    });
-    setSelectedRecord((prev) => (prev?.id === record.id ? { ...record, updatedAt: new Date().toISOString() } : prev));
+    const now = new Date().toISOString();
+    const updated = { ...record, updatedAt: now };
+    setRecords((prev) => prev.map((r) => (r.id === record.id ? updated : r)));
+    setSelectedRecord((prev) => (prev?.id === record.id ? updated : prev));
   }, []);
 
   const deleteRecord = useCallback((id: string) => {
-    setRecords((prev) => {
-      const next = prev.filter((r) => r.id !== id);
-      saveRecords(next);
-      return next;
-    });
+    setRecords((prev) => prev.filter((r) => r.id !== id));
     setSelectedRecord((prev) => (prev?.id === id ? null : prev));
     setSelectedRecordId((prev) => (prev === id ? null : prev));
   }, []);
