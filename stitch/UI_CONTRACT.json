@@ -1,0 +1,696 @@
+[
+  {
+    "screenId": "da2bb666e5b04e16a4d861e33b1e5d46",
+    "screenTitle": "Insights - Skill Wiring Probe Fixed",
+    "deviceType": "DESKTOP",
+    "elements": [
+      {
+        "type": "link",
+        "label": "Operations",
+        "href": "#",
+        "line": 175
+      },
+      {
+        "type": "link",
+        "label": "Editor",
+        "href": "#",
+        "line": 180
+      },
+      {
+        "type": "link",
+        "label": "Insights",
+        "href": "#",
+        "line": 185
+      },
+      {
+        "type": "link",
+        "label": "settings",
+        "href": "#",
+        "line": 192
+      },
+      {
+        "type": "link",
+        "label": "Support",
+        "href": "#",
+        "line": 196
+      },
+      {
+        "type": "link",
+        "label": "View in Operations",
+        "href": "#",
+        "line": 231
+      },
+      {
+        "type": "button",
+        "label": "toggle_on",
+        "line": 136
+      },
+      {
+        "type": "button",
+        "label": "notifications",
+        "line": 139
+      },
+      {
+        "type": "button",
+        "label": "settings",
+        "line": 143
+      },
+      {
+        "type": "button",
+        "label": "New Probe",
+        "line": 167
+      },
+      {
+        "type": "button",
+        "label": "Filter Insights",
+        "line": 212
+      },
+      {
+        "type": "button",
+        "label": "Export Summary",
+        "line": 216
+      },
+      {
+        "type": "button",
+        "label": "more_vert",
+        "line": 299
+      },
+      {
+        "type": "button",
+        "label": "Enable Trace Logic",
+        "line": 336
+      },
+      {
+        "type": "input",
+        "label": "Search insights...",
+        "inputType": "text",
+        "placeholder": "Search insights...",
+        "line": 133
+      }
+    ],
+    "navigation": [
+      {
+        "type": "link",
+        "label": "Operations",
+        "href": "#",
+        "line": 175
+      },
+      {
+        "type": "link",
+        "label": "Editor",
+        "href": "#",
+        "line": 180
+      },
+      {
+        "type": "link",
+        "label": "Insights",
+        "href": "#",
+        "line": 185
+      },
+      {
+        "type": "link",
+        "label": "settings",
+        "href": "#",
+        "line": 192
+      },
+      {
+        "type": "link",
+        "label": "Support",
+        "href": "#",
+        "line": 196
+      },
+      {
+        "type": "link",
+        "label": "View in Operations",
+        "href": "#",
+        "line": 231
+      }
+    ],
+    "buttons": [
+      {
+        "type": "button",
+        "label": "toggle_on",
+        "line": 136
+      },
+      {
+        "type": "button",
+        "label": "notifications",
+        "line": 139
+      },
+      {
+        "type": "button",
+        "label": "settings",
+        "line": 143
+      },
+      {
+        "type": "button",
+        "label": "New Probe",
+        "line": 167
+      },
+      {
+        "type": "button",
+        "label": "Filter Insights",
+        "line": 212
+      },
+      {
+        "type": "button",
+        "label": "Export Summary",
+        "line": 216
+      },
+      {
+        "type": "button",
+        "label": "more_vert",
+        "line": 299
+      },
+      {
+        "type": "button",
+        "label": "Enable Trace Logic",
+        "line": 336
+      }
+    ],
+    "inputs": [
+      {
+        "type": "input",
+        "label": "Search insights...",
+        "inputType": "text",
+        "placeholder": "Search insights...",
+        "line": 133
+      }
+    ],
+    "hardcodedData": [],
+    "totalInteractive": 15,
+    "requiresRouter": false,
+    "requiresDragDrop": false
+  },
+  {
+    "screenId": "3f8af98080a24001b8991d265d314569",
+    "screenTitle": "Record Editor - Skill Wiring Probe Fixed",
+    "deviceType": "DESKTOP",
+    "elements": [
+      {
+        "type": "link",
+        "label": "Operations",
+        "href": "#",
+        "line": 159
+      },
+      {
+        "type": "link",
+        "label": "Editor",
+        "href": "#",
+        "line": 163
+      },
+      {
+        "type": "link",
+        "label": "Insights",
+        "href": "#",
+        "line": 167
+      },
+      {
+        "type": "link",
+        "label": "settings",
+        "href": "#",
+        "line": 173
+      },
+      {
+        "type": "link",
+        "label": "Support",
+        "href": "#",
+        "line": 177
+      },
+      {
+        "type": "button",
+        "label": "toggle_on",
+        "line": 126
+      },
+      {
+        "type": "button",
+        "label": "notifications",
+        "line": 129
+      },
+      {
+        "type": "button",
+        "label": "settings",
+        "line": 132
+      },
+      {
+        "type": "button",
+        "label": "New Probe",
+        "line": 153
+      },
+      {
+        "type": "button",
+        "label": "Discard",
+        "line": 192
+      },
+      {
+        "type": "button",
+        "label": "Save Now",
+        "line": 193
+      },
+      {
+        "type": "button",
+        "label": "Format JSON",
+        "line": 263
+      },
+      {
+        "type": "button",
+        "label": "Cancel",
+        "line": 284
+      },
+      {
+        "type": "button",
+        "label": "Record",
+        "line": 287
+      },
+      {
+        "type": "input",
+        "label": "Search...",
+        "inputType": "text",
+        "placeholder": "Search...",
+        "line": 124
+      },
+      {
+        "type": "input",
+        "label": "text",
+        "inputType": "text",
+        "line": 214
+      },
+      {
+        "type": "input",
+        "label": "select",
+        "inputType": "select",
+        "line": 222
+      },
+      {
+        "type": "input",
+        "label": "textarea",
+        "inputType": "textarea",
+        "line": 235
+      },
+      {
+        "type": "input",
+        "label": "radio",
+        "inputType": "radio",
+        "line": 245
+      },
+      {
+        "type": "input",
+        "label": "radio",
+        "inputType": "radio",
+        "line": 249
+      },
+      {
+        "type": "input",
+        "label": "radio",
+        "inputType": "radio",
+        "line": 253
+      },
+      {
+        "type": "input",
+        "label": "textarea",
+        "inputType": "textarea",
+        "line": 272
+      },
+      {
+        "type": "form",
+        "label": "form",
+        "line": 205
+      }
+    ],
+    "navigation": [
+      {
+        "type": "link",
+        "label": "Operations",
+        "href": "#",
+        "line": 159
+      },
+      {
+        "type": "link",
+        "label": "Editor",
+        "href": "#",
+        "line": 163
+      },
+      {
+        "type": "link",
+        "label": "Insights",
+        "href": "#",
+        "line": 167
+      },
+      {
+        "type": "link",
+        "label": "settings",
+        "href": "#",
+        "line": 173
+      },
+      {
+        "type": "link",
+        "label": "Support",
+        "href": "#",
+        "line": 177
+      }
+    ],
+    "buttons": [
+      {
+        "type": "button",
+        "label": "toggle_on",
+        "line": 126
+      },
+      {
+        "type": "button",
+        "label": "notifications",
+        "line": 129
+      },
+      {
+        "type": "button",
+        "label": "settings",
+        "line": 132
+      },
+      {
+        "type": "button",
+        "label": "New Probe",
+        "line": 153
+      },
+      {
+        "type": "button",
+        "label": "Discard",
+        "line": 192
+      },
+      {
+        "type": "button",
+        "label": "Save Now",
+        "line": 193
+      },
+      {
+        "type": "button",
+        "label": "Format JSON",
+        "line": 263
+      },
+      {
+        "type": "button",
+        "label": "Cancel",
+        "line": 284
+      },
+      {
+        "type": "button",
+        "label": "Record",
+        "line": 287
+      }
+    ],
+    "inputs": [
+      {
+        "type": "input",
+        "label": "Search...",
+        "inputType": "text",
+        "placeholder": "Search...",
+        "line": 124
+      },
+      {
+        "type": "input",
+        "label": "text",
+        "inputType": "text",
+        "line": 214
+      },
+      {
+        "type": "input",
+        "label": "select",
+        "inputType": "select",
+        "line": 222
+      },
+      {
+        "type": "input",
+        "label": "textarea",
+        "inputType": "textarea",
+        "line": 235
+      },
+      {
+        "type": "input",
+        "label": "radio",
+        "inputType": "radio",
+        "line": 245
+      },
+      {
+        "type": "input",
+        "label": "radio",
+        "inputType": "radio",
+        "line": 249
+      },
+      {
+        "type": "input",
+        "label": "radio",
+        "inputType": "radio",
+        "line": 253
+      },
+      {
+        "type": "input",
+        "label": "textarea",
+        "inputType": "textarea",
+        "line": 272
+      }
+    ],
+    "hardcodedData": [],
+    "totalInteractive": 23,
+    "requiresRouter": false,
+    "requiresDragDrop": false
+  },
+  {
+    "screenId": "23d37e15a8a741eab34dbcdb2492b91c",
+    "screenTitle": "Record Operations - Skill Wiring Probe Fixed",
+    "deviceType": "DESKTOP",
+    "elements": [
+      {
+        "type": "link",
+        "label": "Operations",
+        "href": "#",
+        "line": 161
+      },
+      {
+        "type": "link",
+        "label": "Editor",
+        "href": "#",
+        "line": 168
+      },
+      {
+        "type": "link",
+        "label": "Insights",
+        "href": "#",
+        "line": 175
+      },
+      {
+        "type": "link",
+        "label": "settings",
+        "href": "#",
+        "line": 186
+      },
+      {
+        "type": "link",
+        "label": "Support",
+        "href": "#",
+        "line": 192
+      },
+      {
+        "type": "button",
+        "label": "New Probe",
+        "line": 151
+      },
+      {
+        "type": "button",
+        "label": "Toggle On/Off",
+        "line": 227
+      },
+      {
+        "type": "button",
+        "label": "Notifications",
+        "line": 230
+      },
+      {
+        "type": "button",
+        "label": "Settings",
+        "line": 234
+      },
+      {
+        "type": "button",
+        "label": "Refresh",
+        "line": 302
+      },
+      {
+        "type": "button",
+        "label": "Close Preview",
+        "line": 420
+      },
+      {
+        "type": "button",
+        "label": "edit",
+        "line": 444
+      },
+      {
+        "type": "button",
+        "label": "Suspend",
+        "line": 474
+      },
+      {
+        "type": "button",
+        "label": "Force Sync",
+        "line": 477
+      },
+      {
+        "type": "input",
+        "label": "Search records by ID, Type, or Status...",
+        "inputType": "text",
+        "placeholder": "Search records by ID, Type, or Status...",
+        "line": 223
+      },
+      {
+        "type": "input",
+        "label": "select",
+        "inputType": "select",
+        "line": 281
+      },
+      {
+        "type": "input",
+        "label": "select",
+        "inputType": "select",
+        "line": 287
+      },
+      {
+        "type": "input",
+        "label": "select",
+        "inputType": "select",
+        "line": 292
+      },
+      {
+        "type": "input",
+        "label": "text",
+        "inputType": "text",
+        "line": 451
+      },
+      {
+        "type": "input",
+        "label": "text",
+        "inputType": "text",
+        "line": 455
+      }
+    ],
+    "navigation": [
+      {
+        "type": "link",
+        "label": "Operations",
+        "href": "#",
+        "line": 161
+      },
+      {
+        "type": "link",
+        "label": "Editor",
+        "href": "#",
+        "line": 168
+      },
+      {
+        "type": "link",
+        "label": "Insights",
+        "href": "#",
+        "line": 175
+      },
+      {
+        "type": "link",
+        "label": "settings",
+        "href": "#",
+        "line": 186
+      },
+      {
+        "type": "link",
+        "label": "Support",
+        "href": "#",
+        "line": 192
+      }
+    ],
+    "buttons": [
+      {
+        "type": "button",
+        "label": "New Probe",
+        "line": 151
+      },
+      {
+        "type": "button",
+        "label": "Toggle On/Off",
+        "line": 227
+      },
+      {
+        "type": "button",
+        "label": "Notifications",
+        "line": 230
+      },
+      {
+        "type": "button",
+        "label": "Settings",
+        "line": 234
+      },
+      {
+        "type": "button",
+        "label": "Refresh",
+        "line": 302
+      },
+      {
+        "type": "button",
+        "label": "Close Preview",
+        "line": 420
+      },
+      {
+        "type": "button",
+        "label": "edit",
+        "line": 444
+      },
+      {
+        "type": "button",
+        "label": "Suspend",
+        "line": 474
+      },
+      {
+        "type": "button",
+        "label": "Force Sync",
+        "line": 477
+      }
+    ],
+    "inputs": [
+      {
+        "type": "input",
+        "label": "Search records by ID, Type, or Status...",
+        "inputType": "text",
+        "placeholder": "Search records by ID, Type, or Status...",
+        "line": 223
+      },
+      {
+        "type": "input",
+        "label": "select",
+        "inputType": "select",
+        "line": 281
+      },
+      {
+        "type": "input",
+        "label": "select",
+        "inputType": "select",
+        "line": 287
+      },
+      {
+        "type": "input",
+        "label": "select",
+        "inputType": "select",
+        "line": 292
+      },
+      {
+        "type": "input",
+        "label": "text",
+        "inputType": "text",
+        "line": 451
+      },
+      {
+        "type": "input",
+        "label": "text",
+        "inputType": "text",
+        "line": 455
+      }
+    ],
+    "hardcodedData": [],
+    "totalInteractive": 20,
+    "requiresRouter": false,
+    "requiresDragDrop": false
+  }
+]
